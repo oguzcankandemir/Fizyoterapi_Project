@@ -1,0 +1,18 @@
+﻿@model EntityLayer.Concrete.SurveyQuestion
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Survey</h2>
+<form method="post">
+    <p>@Model.Question</p>
+    @foreach (var choice in Model.Choices)
+    {
+        <div>
+            <input type="radio" asp-for="SelectedChoiceId" value="@choice.Id" />
+            <label>@choice.Text</label>
+        </div>
+    }
+    <button type="submit">Submit</button>
+</form>

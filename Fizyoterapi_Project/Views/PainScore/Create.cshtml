@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.PainScoreEntry
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>Create Pain Score Entry</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Date:</label>
+        <input asp-for="Date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Score:</label>
+        <input asp-for="Score" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Cancel</a>
+</form>
+

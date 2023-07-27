@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.PainScoreEntry
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1> Ağrı Sonucu Silme Ekranı</h1>
+
+<div>
+    <h3>Bu Ağrı Sonucunu Silmek için Emin Misiniz?</h3>
+    <div>
+        <h4>Date: @Model.Date</h4>
+        <h4>Score: @Model.Score</h4>
+    </div>
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index">Cancel</a>
+    </form>
+</div>
+
+
