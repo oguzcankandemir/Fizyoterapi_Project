@@ -17,6 +17,13 @@ namespace DataAccesLayer.Concrete
         public DbSet<PainScoreEntry> PainScoreEntries { get; set; }
         public DbSet<SurveyQuestion> surveyQuestions { get; set; }
         public DbSet<Choice> Choices { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Destination> Destinations { get; set; }
+        public DbSet<Guide> Guides { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+      
+      
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configuration of entities and their relationships goes here
